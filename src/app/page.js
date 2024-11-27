@@ -21,10 +21,10 @@ function BusinessCard({person}) {
   return (
     <div className="business-card">
       <h2>{person.firstName} {person.lastName}</h2>
-      <p><strong>Company:</strong> {person.companyName}</p>
-      <p><strong>Email:</strong> {person.email}</p>
-      <p><strong>Phone:</strong> {person.phoneNumber}</p>
-      <p><strong>Address:</strong> {person.address}</p>
+      <p><strong></strong> {person.companyName}</p>
+      <p><strong></strong> {person.email}</p>
+      <p><strong></strong> {person.phoneNumber}</p>
+      <p><strong></strong> {person.address}</p>
     </div>
   );
 }
