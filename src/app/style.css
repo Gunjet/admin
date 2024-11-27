@@ -1,32 +1,7 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-.app {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-  }
   h1 {
     font-size: 2.5em;
-    color: #333;
+    color: black;
   }
   .card-container {
     display: flex;
@@ -36,7 +11,6 @@ body {
     margin-top: 30px;
   }
   .business-card {
-    border: 1px solid #ddd;
     background-color: white;
     padding: 20px;
     width: 550px;
@@ -48,12 +22,4 @@ body {
   .business-card h2 {
     font-size: 1.6em;
     margin-bottom: 10px;
-  }
-  .business-card p {
-    font-size: 1em;
-    margin: 5px 0;
-  }
-  .business-card a {
-    color: #007BFF;
-    text-decoration: none;
   }

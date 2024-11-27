@@ -1,10 +1,11 @@
-"use client"
+
+"use client";
 
 import Image from "next/image";
-import "./style.css"
+import "./style.css";
+import { A, BusinessCard } from "./neg.js";
 
-
-const data = [
+const users = [
   {id: 1, firstName: "Marian", lastName: "Dixsee", email: "mdixsee0@nba.com", companyName: "Blogtags", phoneNumber: "412-530-2249", address: "62 Meadow Ridge Plaza"},
   {id: 2, firstName: "Coleman", lastName: "Oxbie", email: "coxbie1@oaic.gov.au", companyName: "Fatz", phoneNumber: "592-295-2012", address: "18 Macpherson Place"},
   {id: 3, firstName: "Allx", lastName: "Tomasian", email: "atomasian2@cafepress.com", companyName: "Abata", phoneNumber: "741-828-1962", address: "42040 Ridgeway Trail"},
@@ -17,27 +18,37 @@ const data = [
   {id: 10, firstName: "Jehanna", lastName: "Cleobury", email: "jcleobury9@huffingtonpost.com", companyName: "Flashpoint", phoneNumber: "396-811-4137", address: "3759 Oak Valley Park"}
 ];
 
-function BusinessCard({person}) {
+export default function B() {
   return (
-    <div className="business-card">
-      <h2>{person.firstName} {person.lastName}</h2>
-      <p><strong></strong> {person.companyName}</p>
-      <p><strong></strong> {person.email}</p>
-      <p><strong></strong> {person.phoneNumber}</p>
-      <p><strong></strong> {person.address}</p>
-    </div>
+      <div className="card-container">
+        {users.map(user => (
+          <BusinessCard key={user.id} users={user} />
+        ))}
+      </div>
   );
 }
 
-function App() {
-  return (
-    <div className="app">
-      <div className="card-container">
-        {data.map(person => (
-          <BusinessCard key={person.id} person={person} />
-        ))}
-      </div>
-    </div>
-  );
-}
-export default App;
+// function BusinessCard({user}) {
+//   return (
+//     <div className="business-card">
+//       <h2>{user.firstName} {user.lastName}</h2>
+//       <p> {user.companyName}</p>
+//       <p> {user.email}</p>
+//       <p> {user.phoneNumber}</p>
+//       <p> {user.address}</p>
+//     </div>
+//   );
+// }
+
+// function A() {
+//   return (
+//     <div className="A">
+//       <div className="card-container">
+//         {users.map(user => (
+//           <BusinessCard key={user.id} user={user} />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+// export default A;
