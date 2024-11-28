@@ -1,5 +1,4 @@
 
-
 export function BusinessCard({users}) {
   console.log(users)
   return (

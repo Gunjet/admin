@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import "./style.css";
-import { A, BusinessCard } from "./neg.js";
+import { BusinessCard } from "./neg.js";
 
 const users = [
   {id: 1, firstName: "Marian", lastName: "Dixsee", email: "mdixsee0@nba.com", companyName: "Blogtags", phoneNumber: "412-530-2249", address: "62 Meadow Ridge Plaza"},
@@ -22,33 +22,9 @@ export default function B() {
   return (
       <div className="card-container">
         {users.map(user => (
-          <BusinessCard key={user.id} users={user} />
+          <BusinessCard key={user.id} user={B} />
         ))}
       </div>
   );
 }
 
-// function BusinessCard({user}) {
-//   return (
-//     <div className="business-card">
-//       <h2>{user.firstName} {user.lastName}</h2>
-//       <p> {user.companyName}</p>
-//       <p> {user.email}</p>
-//       <p> {user.phoneNumber}</p>
-//       <p> {user.address}</p>
-//     </div>
-//   );
-// }
-
-// function A() {
-//   return (
-//     <div className="A">
-//       <div className="card-container">
-//         {users.map(user => (
-//           <BusinessCard key={user.id} user={user} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-// export default A;

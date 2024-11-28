@@ -1,7 +1,5 @@
 
 "use client";
-
-// import Image from "next/image";
 import '../admin/home/style2.css'
 import { BusinessCard } from '../admin/home/comp.js'
 
